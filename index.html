@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>Sistema de Gestión de Turnos</h1>
+            <p class="subtitle">Organizá la fila, atendé más rápido y llevá control del día.</p>
+        </header>
+
+        <section class="acciones">
+            <button id="pausarEntradaBtn" type="button">Pausar entrada</button>
+            <button id="reiniciarDiaBtn" type="button" class="danger">Reiniciar día</button>
+        </section>
+
+        <section class="contenedor-panelDeEntrada">
+            <input
+                type="text"
+                id="nombreYApellidoInput"
+                placeholder="Nombre y apellido"
+                autocomplete="off"
+                maxlength="60"
+            >
+            <button id="anotarBtn" type="button">Anotar</button>
+            <button id="atenderSiguienteBtn" type="button">Atender siguiente</button>
+        </section>
+
+        <section class="estado">
+            <div class="visor" id="visorActual">No hay turnos atendidos todavía</div>
+            <div class="estadisticas">
+                <p><strong>Turnos anotados:</strong> <span id="turnosAnotados">0</span></p>
+                <p><strong>Turnos atendidos:</strong> <span id="turnosAtendidos">0</span></p>
+                <p><strong>En espera:</strong> <span id="turnosEnEspera">0</span></p>
+                <p><strong>Entrada:</strong> <span id="estadoEntrada">Activa</span></p>
+            </div>
+        </section>
+
+        <section class="lista-de-espera">
+            <h2>Lista de espera</h2>
+            <ul id="listaEspera"></ul>
+        </section>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
