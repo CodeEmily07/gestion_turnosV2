@@ -104,6 +104,15 @@ function anotarPersona() {
     }
 
     const nombre = normalizarNombre(nombreCrudo);
+    const ultimoEnCola = estado.cola[estado.cola.length - 1];
+
+    if (ultimoEnCola === nombre) {
+        alert("No se puede anotar dos veces seguidas el mismo nombre.");
+        elementos.nombreYApellidoInput.focus();
+        elementos.nombreYApellidoInput.select();
+        return;
+    }
+
     estado.cola.push(nombre);
     estado.totalAnotados += 1;
     elementos.nombreYApellidoInput.value = "";
